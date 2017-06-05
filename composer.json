@@ -1,0 +1,171 @@
+{
+  "name": "vardot/vardoc-build",
+  "description": "Vardoc Build",
+  "type": "project",
+  "license": "PRIVATE",
+  "authors": [
+    {
+      "name": "Mohammed J. Razem",
+      "email": "m.razem@vardot.com",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Rajab Natshah",
+      "email": "r.natshah@vardot.com",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://bitbucket.org/Vardot/vardoc-build/issues",
+    "source": "https://bitbucket.org/Vardot/vardoc-build"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:Vardot/vardoc.git",
+      "trunk-path": "Trunk",
+      "branches-path": "Branches",
+      "tags-path": "Tags"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "kenwheeler/slick",
+        "version": "1.6.0",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/kenwheeler/slick",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "dinbror/blazy",
+        "version": "1.8.2",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/dinbror/blazy",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "ajaxorg/ace-builds",
+        "version": "1.2.6",
+        "type": "library",
+        "source": {
+          "url": "https://github.com/ajaxorg/ace-builds",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "^1.2.0",
+    "cweagans/composer-patches": "^1.6.0",
+    "drupal-composer/drupal-scaffold": "^2.2.0",
+    "drupal/drupal-library-installer-plugin": "~0.3",
+    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
+    "enyo/dropzone": "4.3.0",
+    "dinbror/blazy": "1.8.2",
+    "kenwheeler/slick": "1.6.0",
+    "ajaxorg/ace-builds": "1.2.6",
+    "vardot/vardoc": "8.4.x-dev"
+  },
+  "config": {
+      "bin-dir": "bin/"
+  },
+  "conflict": {
+      "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php",
+      "scripts/varbase/Procedures.php"
+    ]
+  },
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "post-drupal-scaffold-cmd": [
+      "Vardot\\Varbase\\Procedures::postDrupalScaffoldProcedure",
+      "Vardot\\Varbase\\Procedures::postDrupalScaffoldSubProfileProcedure"
+    ],
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-package-install": [
+      "Vardot\\Varbase\\Procedures::postInstallProcedure"
+    ],
+    "post-package-update": [
+      "Vardot\\Varbase\\Procedures::postUpdateProcedure"
+    ],
+    "create-new-vartheme": "scripts/varbase/cmd/create-new-vartheme.sh",
+    "varbase-check-tests": "scripts/varbase/cmd/varbase-check-tests.sh",
+    "varbase-init-tests": "scripts/varbase/cmd/varbase-init-tests.sh",
+    "varbase-apply-tests": "scripts/varbase/cmd/varbase-apply-tests.sh",
+    "varbase-cleanup-tests": "scripts/varbase/cmd/varbase-cleanup-tests.sh",
+    "varbase-full-tests": "scripts/varbase/cmd/varbase-full-tests.sh",
+    "varbase-full-local-tests": "scripts/varbase/cmd/varbase-full-tests.sh",
+    "varbase-full-development-tests": "scripts/varbase/cmd/varbase-full-development-tests.sh",
+    "varbase-full-staging-tests": "scripts/varbase/cmd/varbase-full-staging-tests.sh",
+    "varbase-full-production-tests": "scripts/varbase/cmd/varbase-full-production-tests.sh"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-8.x-4.x": "8.4.x-dev"
+    },
+    "drupal-libraries": {
+      "library-directory": "docroot/libraries",
+      "libraries": [
+        {
+          "name": "dropzone",
+          "package": "enyo/dropzone"
+        },
+        {
+          "name": "blazy",
+          "package": "dinbror/blazy"
+        },
+        {
+          "name": "slick",
+          "package": "kenwheeler/slick"
+        },
+        {
+          "name": "ace",
+          "package": "ajaxorg/ace-builds"
+        }
+      ]
+    },
+    "installer-paths": {
+      "docroot/core": ["type:drupal-core"],
+      "docroot/profiles/{$name}": ["type:drupal-profile"],
+      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "enable-patching": true
+  }
+}
