@@ -15,7 +15,7 @@
       "role": "Maintainer"
     },
     {
-      "name": "Omar Alahmad",
+      "name": "Omar Alahmed",
       "email": "o.alahmad@vardot.com",
       "role": "Maintainer"
     }
@@ -87,7 +87,7 @@
     "dinbror/blazy": "1.8.2",
     "kenwheeler/slick": "1.6.0",
     "ajaxorg/ace-builds": "1.2.6",
-    "vardot/vardoc": "8.x-4.x"
+    "vardot/vardoc": "master"
   },
   "config": {
       "bin-dir": "bin/"
@@ -140,7 +140,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-8.x-4.x": "8.x-4.x"
+      "dev-master": "master"
     },
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
