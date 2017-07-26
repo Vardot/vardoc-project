@@ -1,40 +1,29 @@
 {
-  "name": "vardot/vardoc-build",
-  "description": "Vardoc Build",
+  "name": "vardot/vardoc-project",
+  "description": "Vardoc Project",
   "type": "project",
-  "license": "PRIVATE",
+  "license": "GPL-2.0+",
   "authors": [
     {
-      "name": "Mohammed J. Razem",
-      "email": "m.razem@vardot.com",
-      "role": "Maintainer"
-    },
-    {
-      "name": "Rajab Natshah",
-      "email": "r.natshah@vardot.com",
-      "role": "Maintainer"
-    },
-    {
-      "name": "Omar Alahmed",
-      "email": "o.alahmad@vardot.com",
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
       "role": "Maintainer"
     }
   ],
   "support": {
-    "issues": "https://bitbucket.org/Vardot/vardoc-build/issues",
-    "source": "https://bitbucket.org/Vardot/vardoc-build"
+    "issues": "http://drupal.org/project/issues/vardoc",
+    "source": "http://cgit.drupalcode.org/vardoc"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
+    }
+  ],
+  "repositories": [
     {
-      "type": "vcs",
-      "url":  "git@bitbucket.org:Vardot/vardoc.git",
-      "trunk-path": "Trunk",
-      "branches-path": "Branches",
-      "tags-path": "Tags"
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
     {
       "type": "package",
@@ -80,6 +69,7 @@
     "php": ">=5.6",
     "composer/installers": "^1.2.0",
     "cweagans/composer-patches": "^1.6.0",
+    "wikimedia/composer-merge-plugin": "~1.4",
     "drupal-composer/drupal-scaffold": "^2.2.0",
     "drupal/drupal-library-installer-plugin": "~0.3",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
@@ -90,13 +80,17 @@
     "vardot/vardoc": "master"
   },
   "config": {
-      "bin-dir": "bin/"
-  },
-  "conflict": {
-      "drupal/drupal": "*"
+    "bin-dir": "bin/",
+    "secure-http": false,
+    "classmap-authoritative": true,
+    "prepend-autoloader": false,
+    "optimize-autoloader": true
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "conflict": {
+    "drupal/drupal": "*"
+  },
   "autoload": {
     "classmap": [
       "scripts/composer/ScriptHandler.php",
@@ -126,21 +120,11 @@
     ],
     "post-package-update": [
       "Vardot\\Varbase\\Procedures::postUpdateProcedure"
-    ],
-    "create-new-vartheme": "scripts/varbase/cmd/create-new-vartheme.sh",
-    "varbase-check-tests": "scripts/varbase/cmd/varbase-check-tests.sh",
-    "varbase-init-tests": "scripts/varbase/cmd/varbase-init-tests.sh",
-    "varbase-apply-tests": "scripts/varbase/cmd/varbase-apply-tests.sh",
-    "varbase-cleanup-tests": "scripts/varbase/cmd/varbase-cleanup-tests.sh",
-    "varbase-full-tests": "scripts/varbase/cmd/varbase-full-tests.sh",
-    "varbase-full-local-tests": "scripts/varbase/cmd/varbase-full-tests.sh",
-    "varbase-full-development-tests": "scripts/varbase/cmd/varbase-full-development-tests.sh",
-    "varbase-full-staging-tests": "scripts/varbase/cmd/varbase-full-staging-tests.sh",
-    "varbase-full-production-tests": "scripts/varbase/cmd/varbase-full-production-tests.sh"
+    ]
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "master"
+      "dev-8.x-1.x": "8.1.x-dev"
     },
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
