@@ -3,6 +3,8 @@
   "description": "Vardoc Project",
   "type": "project",
   "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "authors": [
     {
       "name": "Vardot",
@@ -77,17 +79,12 @@
     "dinbror/blazy": "1.8.2",
     "kenwheeler/slick": "1.6.0",
     "ajaxorg/ace-builds": "1.2.6",
-    "vardot/vardoc": "master"
+    "vardot/vardoc": "8.1.x-dev"
   },
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false,
-    "classmap-authoritative": true,
-    "prepend-autoloader": false,
-    "optimize-autoloader": true
+    "secure-http": false
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "conflict": {
     "drupal/drupal": "*"
   },
