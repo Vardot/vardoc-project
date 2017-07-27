@@ -1,6 +1,6 @@
 # Vardoc Project
 
-[![](https://www.drupal.org/files/project-images/vardoc-mockup.png)](https://www.drupal.org/project/vardoc)
+[![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
 
 Project template for [Vardoc distribution](http://www.drupal.org/project/vardoc).
 
