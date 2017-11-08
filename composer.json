@@ -26,132 +26,72 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "kenwheeler/slick",
-        "version": "1.6.0",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/kenwheeler/slick",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "dinbror/blazy",
-        "version": "1.8.2",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/dinbror/blazy",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "ajaxorg/ace-builds",
-        "version": "1.2.6",
-        "type": "library",
-        "source": {
-          "url": "https://github.com/ajaxorg/ace-builds",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
     }
   ],
   "require": {
-    "php": ">=5.6",
-    "composer/installers": "^1.2.0",
-    "cweagans/composer-patches": "^1.6.0",
-    "wikimedia/composer-merge-plugin": "~1.4",
-    "drupal-composer/drupal-scaffold": "^2.2.0",
-    "drupal/drupal-library-installer-plugin": "~0.3",
-    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
-    "enyo/dropzone": "4.3.0",
-    "dinbror/blazy": "1.8.2",
-    "kenwheeler/slick": "1.6.0",
-    "ajaxorg/ace-builds": "1.2.6",
-    "vardot/vardoc": "8.1.x-dev"
+    "composer/installers": "1.4.0",
+    "cweagans/composer-patches": "1.6.2",
+    "drupal-composer/drupal-scaffold": "2.3.0",
+    "drupal/drupal-library-installer-plugin": "0.3",
+    "webflo/drupal-finder": "1.0",
+    "webmozart/path-util": "2.3",
+    "vardot/vardoc": "8.1.x-dev",
+    "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
+    "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
+    "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
+    "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
+    "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
+    "drupal/admin_toolbar": "1.x-dev#5a07bd6290449ebb9aa16e47614b7f51a921223b",
+    "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
+    "drupal/tour_builder": "1.x-dev#d70e898949b7ec4095efb391a0dbec56d0117558",
+    "drupal/l10n_client": "1.x-dev#9bf8d597732870bdca301512c71b6e5d74d48db2",
+    "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
+    "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
+    "drupal/menu_position": "1.x-dev#1e3a6778acc74a35174d297052ec44995d5e5137",
+    "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
+    "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
+    "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
+    "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
+    "drupal/field_group": "3.x-dev#83c00b5e61056940745e9c37ba4bbac9a1124d75"
   },
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false
-  },
-  "conflict": {
-    "drupal/drupal": "*"
-  },
-  "autoload": {
-    "classmap": [
-      "scripts/composer/ScriptHandler.php",
-      "scripts/varbase/Procedures.php"
-    ]
+    "secure-http": false,
+    "optimize-autoloader": true
   },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "post-drupal-scaffold-cmd": [
-      "Vardot\\Varbase\\Procedures::postDrupalScaffoldProcedure",
-      "Vardot\\Varbase\\Procedures::postDrupalScaffoldSubProfileProcedure"
-    ],
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
     "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
+      "@composer drupal-scaffold"
     ],
     "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
-    "post-package-install": [
-      "Vardot\\Varbase\\Procedures::postInstallProcedure"
-    ],
-    "post-package-update": [
-      "Vardot\\Varbase\\Procedures::postUpdateProcedure"
-    ]
+    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "conflict": {
+    "drupal/drupal": "*"
   },
   "extra": {
     "branch-alias": {
-      "dev-8.x-1.x": "8.1.x-dev"
-    },
-    "drupal-libraries": {
-      "library-directory": "docroot/libraries",
-      "libraries": [
-        {
-          "name": "dropzone",
-          "package": "enyo/dropzone"
-        },
-        {
-          "name": "blazy",
-          "package": "dinbror/blazy"
-        },
-        {
-          "name": "slick",
-          "package": "kenwheeler/slick"
-        },
-        {
-          "name": "ace",
-          "package": "ajaxorg/ace-builds"
-        }
-      ]
+      "dev-8.x-4.x": "8.4.x-dev"
     },
     "installer-paths": {
-      "docroot/core": ["type:drupal-core"],
+      "docroot/core": ["drupal/core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
-      "docroot/libraries/{$name}": ["type:drupal-library"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
-    "enable-patching": true
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true
   }
 }
