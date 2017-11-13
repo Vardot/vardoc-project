@@ -22,12 +22,6 @@
       "url": "https://packages.drupal.org/8"
     }
   ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
-  ],
   "require": {
     "composer/installers": "1.4.0",
     "cweagans/composer-patches": "1.6.2",
@@ -35,7 +29,7 @@
     "drupal/drupal-library-installer-plugin": "0.3",
     "webflo/drupal-finder": "1.0",
     "webmozart/path-util": "2.3",
-    "vardot/vardoc": "8.1.x-dev",
+    "vardot/vardoc": "8.1.0-beta3",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
@@ -52,7 +46,8 @@
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
-    "drupal/field_group": "3.x-dev#83c00b5e61056940745e9c37ba4bbac9a1124d75"
+    "drupal/field_group": "3.x-dev#83c00b5e61056940745e9c37ba4bbac9a1124d75",
+    "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32"
   },
   "config": {
     "bin-dir": "bin/",
