@@ -2,7 +2,7 @@
   "name": "vardot/vardoc-project",
   "description": "Vardoc Project",
   "type": "project",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "authors": [
