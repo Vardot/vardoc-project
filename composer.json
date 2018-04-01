@@ -23,12 +23,13 @@
     }
   ],
   "require": {
-    "composer/installers": "1.4.0",
+    "composer/installers": "1.5.0",
+    "oomphinc/composer-installers-extender": "1.1.2",
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "webflo/drupal-finder": "1.0",
-    "webmozart/path-util": "2.3",
+    "webflo/drupal-finder": "1.1.0",
+    "webmozart/path-util": "2.3.0",
     "vardot/vardoc": "8.1.x-dev",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
@@ -42,12 +43,14 @@
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
-    "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
+    "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
+    "drupal/material_admin_support": "1.x-dev#96ce192c31643faf69d77aca3c68578f778be3bc",
+    "drupal/type_style": "1.x-dev#486a8ec7c1c7dcd93790ee281c78cfa3dba90d78",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
-    "drupal/votingapi_widgets": "1.x-dev#97133ddc9798a912eababe63e1a86deff3e5d9c9",
+    "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
     "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a"
   },
   "config": {
