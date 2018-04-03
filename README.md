@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=8.x-1.0-rc2)](https://travis-ci.org/Vardot/vardoc/builds/338536228) Vardoc 8.1.0-rc2
+[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=8.x-1.0-rc3)](https://travis-ci.org/Vardot/vardoc/builds/361538527) Vardoc 8.1.0-rc3
 # Vardoc Project
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -9,7 +9,7 @@ Project template for [Vardoc distribution](http://www.drupal.org/project/vardoc)
 
 To install the most recent stable release of Vardoc 8.1.x run this command:
 ```
-composer create-project Vardot/vardoc-project:^8.1.0-rc2 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/vardoc-project:^8.1.0-rc3 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Vardoc 8.1.x run this command:
