@@ -39,13 +39,13 @@
     }
   },
   "require": {
-    "composer/installers": "1.5.0",
-    "oomphinc/composer-installers-extender": "1.1.2",
-    "cweagans/composer-patches": "1.6.4",
-    "drupal-composer/drupal-scaffold": "2.4.0",
-    "drupal/drupal-library-installer-plugin": "0.3",
-    "webflo/drupal-finder": "1.1.0",
-    "webmozart/path-util": "2.3.0",
+    "composer/installers": "^1.5.0",
+    "oomphinc/composer-installers-extender": "^1.1.2",
+    "cweagans/composer-patches": "^1.6.4",
+    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "webflo/drupal-finder": "^1.1.0",
+    "webmozart/path-util": "^2.3.0",
     "vardot/vardoc": "8.2.x-dev",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
@@ -58,7 +58,7 @@
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
-    "drupal/type_style": "1.x-dev#486a8ec7c1c7dcd93790ee281c78cfa3dba90d78",
+    "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
@@ -69,7 +69,10 @@
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "drupal/core": "dist"
+    }
   },
   "autoload": {
     "psr-4": {
