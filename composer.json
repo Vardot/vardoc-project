@@ -46,7 +46,7 @@
     "drupal/drupal-library-installer-plugin": "^0.3",
     "webflo/drupal-finder": "^1.1.0",
     "webmozart/path-util": "^2.3.0",
-    "vardot/vardoc": "8.2.x-dev",
+    "vardot/vardoc": "8.2.2",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
     "drupal/entity_clone": "1.x-dev#6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5",
@@ -62,7 +62,6 @@
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
     "drupal/menu_item_visibility": "1.x-dev#7806c36b68bdc1ac3582e3a034b94126cd3d1d32",
-    "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
     "drupal/faq": "1.x-dev#2bdc0f0fd3fa1941bf7d3579a498e6f40ca9c69a"
   },
   "config": {
