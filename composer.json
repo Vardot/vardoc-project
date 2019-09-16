@@ -3,8 +3,6 @@
   "description": "Vardoc Project",
   "type": "project",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Vardot",
@@ -36,6 +34,10 @@
           "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
         }
       }
+    },
+    "composer-patches": {
+      "type": "vcs",
+      "url": "https://github.com/vardot/composer-patches"
     }
   },
   "require": {
@@ -46,8 +48,8 @@
     "drupal/drupal-library-installer-plugin": "^0.3",
     "webflo/drupal-finder": "^1.1.0",
     "webmozart/path-util": "^2.3.0",
-    "vardot/varbase-updater": "~1.0",
-    "vardot/vardoc": "8.2.x-dev"
+    "vardot/vardoc": "8.2.x-dev",
+    "vardot/varbase-updater": "~1.0"
   },
   "config": {
     "bin-dir": "bin/",
@@ -78,10 +80,22 @@
       "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
     ]
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "conflict": {
     "drupal/drupal": "*"
   },
   "extra": {
+    "_readme": [
+      "NOTICE: We're now using composer patches from Vardot repository to suggest",
+      "several fixes and better handling of patches in your Drupal project.",
+      "You'll notice that we have included (https://github.com/vardot/composer-patches)",
+      "in this composer.json repositories. This will replace the original",
+      "library (cweagans/composer-patches) with our own from (vardot/composer-patches).",
+      "See https://github.com/cweagans/composer-patches/pull/243 and more details",
+      "on our changes on the composer-patches package. Once our changes get merged,",
+      "we will revert to using (cweagans/composer-patches) without this override."
+    ],
     "branch-alias": {
       "dev-8.x-2.x": "8.2.x-dev"
     },
@@ -90,29 +104,41 @@
       "npm-asset"
     ],
     "installer-paths": {
-      "docroot/core": ["drupal/core"],
+      "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
+      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
         "type:npm-asset"
       ],
+      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
-          {"name": "dropzone","package": "npm-asset/dropzone"},
-          {"name": "blazy", "package": "npm-asset/blazy"},
-          {"name": "slick", "package": "npm-asset/slick-carousel"},
-          {"name": "ace", "package": "npm-asset/ace-builds"}
+        {"name": "dropzone","package": "npm-asset/dropzone"},
+        {"name": "blazy", "package": "npm-asset/blazy"},
+        {"name": "slick", "package": "npm-asset/slick-carousel"},
+        {"name": "ace", "package": "npm-asset/ace-builds"},
+        {"name": "chartjs", "package": "bower-asset/chartjs"},
+        {"name": "c3","package": "bower-asset/c3"},
+        {"name": "d3", "package": "bower-asset/d3"},
+        {"name": "masonry", "package": "npm-asset/masonry-layout"},
+        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
       ]
     },
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+       "drupal/core": "-p2"
+    }
   }
 }
