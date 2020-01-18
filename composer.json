@@ -41,15 +41,18 @@
     }
   },
   "require": {
-    "composer/installers": "^1.5.0",
-    "oomphinc/composer-installers-extender": "^1.1.2",
-    "cweagans/composer-patches": "^1.6.4",
-    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "composer/installers": "~1.0",
+    "oomphinc/composer-installers-extender": "~1.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal-composer/drupal-scaffold": "~2.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "webflo/drupal-finder": "^1.1.0",
-    "webmozart/path-util": "^2.3.0",
+    "webflo/drupal-finder": "~1.0",
+    "webmozart/path-util": "~2.0",
     "vardot/vardoc": "8.2.x-dev",
     "vardot/varbase-updater": "~1.0"
+  },
+  "replace": {
+    "ajaxorg/ace-builds": "*"
   },
   "config": {
     "bin-dir": "bin/",
@@ -57,11 +60,6 @@
     "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "Vardoc\\composer\\": "src/composer"
     }
   },
   "scripts": {
