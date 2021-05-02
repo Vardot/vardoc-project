@@ -1,12 +1,12 @@
 {
   "name": "vardot/vardoc-project",
-  "description": "Vardoc Project",
+  "description": "Vardoc Project template",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
+      "homepage": "https://github.com/vardot",
       "role": "Maintainer"
     }
   ],
@@ -18,10 +18,14 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-      },
+    },
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    "drupal-ckeditor-plugins": {
+      "type": "composer",
+      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     },
     "antennaio": {
       "type": "package",
@@ -41,16 +45,15 @@
     }
   },
   "require": {
-    "composer/installers": "~1.0",
-    "oomphinc/composer-installers-extender": "~1.0",
+    "composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
-    "drupal/core-project-message": "^8.8.0",
-    "drupal/drupal-library-installer-plugin": "^0.3",
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core-project-message": "^9",
     "webflo/drupal-finder": "~1.0",
     "webmozart/path-util": "~2.0",
-    "vardot/vardoc": "4.0.x-dev",
-    "vardot/varbase-updater": "~1.0"
+    "vardot/vardoc": "5.0.x-dev",
+    "vardot/varbase-updater": "2.x-dev"
   },
   "replace": {
     "ajaxorg/ace-builds": "*"
@@ -120,6 +123,9 @@
       "on our changes on the composer-patches package. Once our changes get merged,",
       "we will revert to using (cweagans/composer-patches) without this override."
     ],
+    "branch-alias": {
+      "dev-5.0.x": "5.0.x-dev"
+    },
     "installer-types": [
       "bower-asset",
       "npm-asset"
@@ -131,7 +137,7 @@
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
-      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
+      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -151,15 +157,16 @@
         {"name": "chartjs", "package": "bower-asset/chartjs"},
         {"name": "c3","package": "bower-asset/c3"},
         {"name": "d3", "package": "bower-asset/d3"},
-        {"name": "masonry", "package": "npm-asset/masonry-layout"},
+        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
+        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"}
       ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
-       "drupal/core": "-p2"
+      "drupal/core": "-p2"
     }
   }
 }

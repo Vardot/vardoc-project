@@ -10,12 +10,8 @@ Project template for [Vardoc distribution](http://www.drupal.org/project/vardoc)
 
 # Install with Composer
 
-To install the most recent stable release of Vardoc 4.0.x run this command:
-```
-composer create-project vardot/vardoc-project:^4.0.1 PROJECT_DIR_NAME --no-dev --no-interaction
-```
 
-To install the dev version of Vardoc 4.0.x-dev run this command:
+To install the dev version of Vardoc 5.0.x-dev run this command:
 ```
-composer create-project vardot/vardoc-project:4.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/vardoc-project:5.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
