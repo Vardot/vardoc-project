@@ -35,4 +35,4 @@ ehthumbs.db
 .bashrc
 errors.log
 
-
+/node_modules
