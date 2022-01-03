@@ -23,10 +23,6 @@
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
-    "drupal-ckeditor-plugins": {
-      "type": "composer",
-      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
-    },
     "composer-patches": {
       "type": "vcs",
       "url": "https://github.com/vardot/composer-patches"
@@ -41,7 +37,7 @@
     "webflo/drupal-finder": "~1.0",
     "webmozart/path-util": "~2.0",
     "vardot/vardoc": "4.0.x-dev",
-    "vardot/varbase-updater": "~1.0"
+    "vardot/varbase-updater": "~2.0"
   },
   "replace": {
     "ajaxorg/ace-builds": "*"
@@ -52,6 +48,15 @@
     "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "drupal/drupal-library-installer-plugin": true,
+      "oomphinc/composer-installers-extender": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "vardot/varbase-updater": true
     }
   },
   "scripts": {
@@ -145,9 +150,9 @@
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
+        {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
-        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"},
+        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
         {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
       ]
     },
