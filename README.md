@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/vardoc.svg?branch=4.0.x-dev)](https://travis-ci.org/Vardot/vardoc) Vardoc 4.0.x-dev
+[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/4.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/35/workflows/4f2b07b1-0826-4675-b1a2-edd4d7adf0d5) Vardoc 4.0.2
 # Vardoc Project
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -10,12 +10,31 @@ Project template for [Vardoc distribution](http://www.drupal.org/project/vardoc)
 
 # Install with Composer
 
-To install the most recent stable release of Vardoc 4.0.x run this command:
+To install the most recent stable release of Vardoc run this command:
 ```
-composer create-project vardot/vardoc-project:^4.0.1 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project vardot/vardoc-project PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Vardoc 4.0.x-dev run this command:
 ```
 composer create-project vardot/vardoc-project:4.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
+
+# [Install with Composer](https://github.com/Vardot/vardoc-project)
+
+Built using [Varbase](https://www.drupal.org/project/varbase), the base
+ distribution delivered to you by [Vardot](https://www.vardot.com)
+
+This distribution is sponsored and developed by [Vardot](https://www.vardot.com).
+Initial building, ongoing maintenance and development.
+
+
+## [Automated Functional Testing](https://github.com/Vardot/vardoc/blob/4.0.x/tests/README.md)
+
+## [Vardoc Gherkin features](https://github.com/Vardot/vardoc/blob/4.0.x/tests/features/vardoc/README.md)
+
+## [Varbase Developer Guide](https://docs.varbase.vardot.com)
+
+## [CHANGELOG for Vardoc](https://github.com/Vardot/vardoc/blob/4.0.x/CHANGELOG.md)
+
+## [General instructions on how to update Vardoc](https://github.com/Vardot/vardoc/blob/4.0.x/UPDATE.md)
