@@ -1,12 +1,12 @@
 {
   "name": "vardot/vardoc-project",
-  "description": "Vardoc Project",
+  "description": "Vardoc Project template",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
+      "homepage": "https://github.com/vardot",
       "role": "Maintainer"
     }
   ],
@@ -23,6 +23,10 @@
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
+    "drupal-ckeditor-plugins": {
+      "type": "composer",
+      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
+    },
     "composer-patches": {
       "type": "vcs",
       "url": "https://github.com/vardot/composer-patches"
@@ -32,13 +36,10 @@
     "composer/installers": "~1.0 || ~2.0",
     "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
-    "drupal/core-project-message": "^8.8.0",
-    "vardot/vardoc": "~4.0.x-dev",
-    "vardot/varbase-updater": "~2.0"
-  },
-  "replace": {
-    "ajaxorg/ace-builds": "*"
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core-project-message": "^9",
+    "vardot/vardoc": "5.0.x-dev",
+    "vardot/varbase-updater": "2.x-dev"
   },
   "config": {
     "bin-dir": "bin/",
@@ -114,6 +115,11 @@
       "on our changes on the composer-patches package. Once our changes get merged,",
       "we will revert to using (cweagans/composer-patches) without this override."
     ],
+    "branch-alias": {
+      "dev-4.0.x": "4.0.x-dev",
+      "dev-5.0.x": "5.0.x-dev",
+      "dev-9.0.x": "9.0.x-dev"
+    },
     "installer-types": [
       "bower-asset",
       "npm-asset"
@@ -148,16 +154,16 @@
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
-        {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
+        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"},
         {"name": "jquery-bar-rating", "package": "npm-asset/jquery-bar-rating"}
       ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
-       "drupal/core": "-p2"
+      "drupal/core": "-p2"
     }
   }
 }
