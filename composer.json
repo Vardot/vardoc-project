@@ -112,8 +112,7 @@
       "we will revert to using (cweagans/composer-patches) without this override."
     ],
     "branch-alias": {
-      "dev-4.0.x": "4.0.x-dev",
-      "dev-9.0.x": "9.0.x-dev"
+      "dev-4.0.x": "4.0.x-dev"
     },
     "installer-types": [
       "bower-asset",
