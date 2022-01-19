@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/4.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/35/workflows/4f2b07b1-0826-4675-b1a2-edd4d7adf0d5) Vardoc 4.0.2
+[![Vardot](https://circleci.com/gh/Vardot/vardoc/tree/4.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/vardoc/72/workflows/5bf164f6-580b-49c4-a952-aa59a9284c79) Vardoc 4.0.3
 # Vardoc Project
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Vardoc%20-%20No%20Padding.png)](https://www.drupal.org/project/vardoc)
@@ -12,7 +12,7 @@ Project template for [Vardoc distribution](http://www.drupal.org/project/vardoc)
 
 To install the most recent stable release of Vardoc run this command:
 ```
-composer create-project vardot/vardoc-project PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project vardot/vardoc-project:~4 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Vardoc 4.0.x-dev run this command:
