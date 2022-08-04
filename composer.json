@@ -75,14 +75,6 @@
     "drupal/drupal": "*"
   },
   "extra": {
-    "drupal-scaffold": {
-      "allowed-packages": [
-        "drupal/core"
-      ],
-      "locations": {
-        "web-root": "docroot/"
-      }
-    },
     "drupal-core-project-message": {
         "include-keys": ["homepage", "support"],
         "post-create-project-cmd-message": [
@@ -119,6 +111,11 @@
       "bower-asset",
       "npm-asset"
     ],
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "docroot/"
+      }
+    },
     "installer-paths": {
       "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
