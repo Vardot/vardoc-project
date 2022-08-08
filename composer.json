@@ -102,6 +102,7 @@
         "vardot/vardoc",
         "vardot/varbase"
       ],
+      "gitignore": true,
       "locations": {
         "web-root": "docroot/",
         "drupal-core-scaffold-assets": "docroot/core/assets/scaffold/files",
