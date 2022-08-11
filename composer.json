@@ -99,12 +99,13 @@
     },
     "drupal-scaffold": {
       "allowed-packages": [
-        "vardot/vardoc",
-        "vardot/varbase"
+        "drupal/core",
+        "vardot/varbase",
+        "vardot/vardoc"
       ],
       "gitignore": true,
       "locations": {
-        "web-root": "docroot/"
+        "web-root": "./docroot"
       },
       "file-mapping": {
         "[web-root]/sites/default/default.services.yml": {
