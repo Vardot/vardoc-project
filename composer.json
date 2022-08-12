@@ -34,8 +34,8 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
-    "vardot/vardoc": "5.0.x-dev",
-    "vardot/varbase-updater": "2.x-dev"
+    "vardot/vardoc": "~5.0",
+    "vardot/varbase-updater": "~2.0"
   },
   "config": {
     "bin-dir": "bin/",
