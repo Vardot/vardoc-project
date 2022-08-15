@@ -33,6 +33,10 @@
     "vardot/vardoc": "4.0.x-dev",
     "vardot/varbase-updater": "2.x-dev"
   },
+  "require-dev": {
+    "drupal/core-dev": "~9.0",
+    "drush/drush": "~11.0"
+  },
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
