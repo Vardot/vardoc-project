@@ -30,7 +30,7 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
-    "vardot/vardoc": "4.0.x-dev",
+    "vardot/vardoc": "~4.0",
     "vardot/varbase-updater": "2.x-dev"
   },
   "require-dev": {
@@ -164,6 +164,6 @@
     "patchLevel": {
       "drupal/core": "-p2"
     },
-    "patches": {}
+    "patches": {  }
   }
 }
