@@ -60,16 +60,15 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
+      "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
     ],
     "post-update-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+      "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
+      "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
     ],
     "post-drupal-scaffold-cmd": [
-      "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure",
-      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldSubProfileProcedure"
+      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
     ]
   },
   "minimum-stability": "dev",
@@ -103,7 +102,6 @@
     "drupal-scaffold": {
       "allowed-packages": [
         "drupal/core",
-        "vardot/varbase",
         "vardot/vardoc"
       ],
       "gitignore": true,
