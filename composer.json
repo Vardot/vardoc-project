@@ -25,14 +25,7 @@
     }
   },
   "require": {
-    "composer/installers": "~2",
-    "oomphinc/composer-installers-extender": "~2",
-    "cweagans/composer-patches": "~1",
-    "drupal/core-composer-scaffold": "~10",
-    "drupal/core-project-message": "~10",
-    "vardot/vardoc": "4.0.x-dev",
-    "vardot/varbase-patches": "~9.2.0",
-    "vardot/varbase-updater": "~2.0.0"
+    "vardot/vardoc": "4.0.x-dev"
   },
   "require-dev": {
     "drupal/core-dev": "~10",
@@ -54,8 +47,7 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpstan/extension-installer": true,
       "php-http/discovery": true,
-      "tbachert/spi": true,
-      "vardot/varbase-updater": true
+      "tbachert/spi": true
     }
   },
   "scripts": {
@@ -67,9 +59,7 @@
       "Vardoc\\composer\\ScriptHandler::createRequiredFiles",
       "Vardoc\\composer\\ScriptHandler::removeGitDirectories"
     ],
-    "post-drupal-scaffold-cmd": [
-      "Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
-    ]
+    "post-drupal-scaffold-cmd": ["Vardoc\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
