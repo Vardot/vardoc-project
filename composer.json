@@ -29,7 +29,7 @@
     "drupal/core-project-message": "~10",
     "webflo/drupal-finder": "~1",
     "cweagans/composer-patches": "~1",
-    "vardot/vardoc": "~4.0.0"
+    "vardot/vardoc": "4.0.x-dev"
   },
   "require-dev": {
     "drupal/core-dev": "~10",
