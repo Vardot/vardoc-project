@@ -9,6 +9,6 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 php_version: "8.3"
-nodejs_version: "18"
+nodejs_version: "24"
 webimage_extra_packages: ["php${DDEV_PHP_VERSION}-yaml"]
 dbimage_extra_packages: [sudo]

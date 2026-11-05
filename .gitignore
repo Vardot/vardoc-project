@@ -36,3 +36,7 @@ ehthumbs.db
 errors.log
 
 /node_modules
+
+# Yarn 4 state.
+.yarn/*
+.pnp.*
