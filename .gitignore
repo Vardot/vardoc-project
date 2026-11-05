@@ -67,3 +67,7 @@ errors.log
 # Ignore yarn lint dependencies.
 node_modules
 yarn.lock
+
+# Yarn 4 state.
+.yarn/*
+.pnp.*
