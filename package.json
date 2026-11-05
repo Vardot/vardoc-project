@@ -12,7 +12,7 @@
   ],
   "license": "GPL-2.0",
   "engines": {
-    "yarn": ">= 4.9.3",
+    "yarn": ">= 4.14.0",
     "node": ">= 24.0"
   },
   "devDependencies": {
@@ -31,5 +31,5 @@
     "stylelint-no-browser-hacks": "^1.2.1",
     "stylelint-order": "^4.0.0"
   },
-  "packageManager": "yarn@4.18.0"
+  "packageManager": "yarn@4.18.1"
 }
