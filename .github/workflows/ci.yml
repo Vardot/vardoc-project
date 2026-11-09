@@ -1,0 +1,34 @@
+# Checks the project template's Composer manifest and its Node.js tooling:
+# Node.js 24 and Yarn 4.18.1 (packageManager), with no lockfile committed.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: ['[0-9]+.[0-9]+.x']
+
+permissions:
+  contents: read
+
+jobs:
+  tooling:
+    name: Composer manifest and Node.js tooling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate composer.json
+        run: composer validate --no-check-publish --no-check-lock
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install with Yarn 4.18.1
+        env:
+          # No yarn.lock is committed, so Yarn 4 must be allowed to create one.
+          YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+        run: |
+          corepack enable
+          yarn --version
+          yarn install
